@@ -23,8 +23,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        {%if session['email_input']%}
+                        <li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+                        {%else%}
                         <li class="nav-item"><a class="nav-link" href="signup">Sign Up</a></li>
                         <li class="nav-item"><a class="nav-link" href="login">Log In</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -52,8 +56,8 @@
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h2 class="display-4">For those about to rock...</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                            <h2 class="display-4">Noi chiar vindem haine!</h2>
+                            <p>Noi vindem haine de brand si nu numai la preturi acceptabile pentru ca stim foarte bine ca nu vrei sa ti vinzi casa pentru a-ti cumpara perechea de papuci sau tricoul dorit!</p>
                         </div>
                     </div>
                 </div>
