@@ -4,11 +4,11 @@ import sqlite3
 conn = sqlite3.connect("login.db")
 c = conn.cursor()
 
-#c.execute("CREATE TABLE users (email text, password text)")
+#c.execute("CREATE TABLE users (input_email text, input_password text)")
 #conn.commit()
 
 
-c.execute("INSERT INTO users VALUES('emyungu@gmail.com', 'Test')")
+c.execute("INSERT INTO users VALUES('emyungu@gmail.com', '123456789')")
 conn.commit()
 
 c.execute("SELECT * FROM users")
