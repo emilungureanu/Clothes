@@ -73,7 +73,14 @@ def signup():
 
             c.execute(f"INSERT INTO users VALUES('{email_input}', '{password_input}')")
             conn.commit()
-            return redirect(url_for("home2"))
+            flash("Cont creat cu succes!")
+            return redirect(url_for("login"))
+#Pagina de logout
+@app.route("/logout")
+def logout():
+    session.pop("password_input", None)
+    session.pop("email_input", None)
+    return redirect(url_for("home"))
 
 if __name__ == "__main__":
     app.run(debug=True)
